@@ -1,0 +1,28 @@
+git 工具
+github 仓库
+
+用git来管理github
+
+1：克隆别人的开源项目（切记不要商业化，否则别人会直接告到你破产）
+    1）在自己电脑中打开一个文件夹
+    2）打开git控制台
+    3）输入git clone 项目链接
+    4）网上的项目就会到当前目录下来
+    
+2：fork下来的项目都会有一个.git/config  的配置文件，
+需要在git控制台中用 
+$ cd .git 
+$ vi config
+就进入vi编辑器，修改里面的
+
+url = https://用户名:密码@github.com/O1Uncle/beginner.git
+
+不然每次都要输入密码才能  git push
+
+3：对git clone到本地仓库中的项目文件的增删改  ---->  同步到远程仓库中去
+    1）git status # 查看当前目录下文件的状态，红色的是在工作区没有进入暂存区的
+        用：git add */filename  # 将它加入到暂存区中
+    2）在暂存区中的文件是绿色的
+        用：git commit -m '文件的描述信息' # 将它加入到本地的git 仓库
+    3）git push  # 上传到远程的git仓库
+
